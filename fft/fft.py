@@ -11,6 +11,7 @@ N = 100 # number of points to simulate, and our FFT size
 
 t = np.arange(N)
 s = np.sin(0.15*2*np.pi*t)
+s = s * np.hamming(N)
 
 # We want 0 Hz (DC) to be the center, that way negative frequencies are to the left
 # We need to perform an FFT shift
